@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: test
-          image: quay.io/quay.io/fmeneses/test/test:latest
+          image: quay.io/fmeneses/test:latest
           ports:
             - name: http-3000
               containerPort: 3000
