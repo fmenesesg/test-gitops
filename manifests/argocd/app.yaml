@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: "test"
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: manifests/base
+    repoURL: https://github.com/fmenesesg/test
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false

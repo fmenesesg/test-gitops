@@ -1,0 +1,18 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: test-gitops
+  description: Contains the ArgoCD manifests for test
+  annotations:
+    argocd/app-name: test-gitops
+    backstage.io/kubernetes-id: test-gitops
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: fmenesesg/test-gitops
+spec:
+  type: gitops
+  system: system:default/conference-application
+  lifecycle: production
+  owner: group:default/guests
+  dependsOn:
+    - component:default/test
