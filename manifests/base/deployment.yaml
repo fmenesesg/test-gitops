@@ -13,6 +13,10 @@ spec:
         app: test
         app.kubernetes.io/component: backstage
         backstage.io/kubernetes-id: default
+      annotations:
+        dapr.io/app-id: test
+        dapr.io/app-port: "3000"
+        dapr.io/enabled: "true"
     spec:
       containers:
         - name: test
